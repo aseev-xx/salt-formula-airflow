@@ -30,8 +30,13 @@ airflow_dirs:
 {{ server.dir.home }}:
   virtualenv.manage:
   - requirements: salt://airflow/files/requirements.txt
-  - python: /usr/bin/python3
+  - python: 'python3.6'
   - user: airflow
+  - pip_pkgs:
+    - 'pip==19.0.3'
+    - 'setuptools==40.9.0'
+  - env_vars:
+      AIRFLOW_GPL_UNIDECODE: 'yes'
   - require:
     - pkg: airflow_packages
 
