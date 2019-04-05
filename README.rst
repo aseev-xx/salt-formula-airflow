@@ -103,4 +103,5 @@ Single airflows service
 Read more
 =========
 
-* links
+* https://airflow.apache.org/
+* https://www.saltstack.com/
